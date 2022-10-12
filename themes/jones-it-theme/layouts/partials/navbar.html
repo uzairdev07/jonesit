@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light navbar-expand-md text-start pulse animated">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            {{ .Site.Title }} <sub style="font-size: 12px;"> IT Without Compromise</sub>
+            {{/*  <img src="/img/logo.png" height="50" class="d-inline-block align-top">  */}}
+          </a>
+        <button data-bs-toggle="collapse" class="navbar-toggler mavbar-toggler-left" data-bs-target="#navcol-1" aria-controls="#navcol-1" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="visually-hidden">Toggle navigation</span>
+            <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse text-end d-xl-flex justify-content-xl-end justify-content-lg-end justify-content-md-end" id="navcol-1">
+            <ul class="navbar-nav">
+                {{ range .Site.Menus.main }}
+                <li class="nav-item" style="margin-left: 20px;">
+                    <a class="nav-link{{ if $.IsMenuCurrent "main" . }} active" aria-current="page{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>

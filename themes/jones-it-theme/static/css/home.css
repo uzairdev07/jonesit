@@ -1,0 +1,22 @@
+.img {
+    max-width: 100%;
+  }
+
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  left: 0;
+}

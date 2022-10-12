@@ -1,0 +1,44 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "JonesIT"
+themesDir = "themes"
+theme = "jones-it-theme"
+paginate= 3
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.92.0"
+    
+[params]
+  google_analytics_id=""
+  dateFormat="Jan 2, 2006"
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Services"
+    url = "/services/"
+    weight = 2
+
+[[menu.main]]
+    name = "Blog"
+    url = "/work/"
+    weight = 3
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 4
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+  pages = "/:filename/"

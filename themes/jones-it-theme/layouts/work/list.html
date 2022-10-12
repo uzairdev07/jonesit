@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head" . }}
+    <link rel="stylesheet" href="/css/blog-list.css">
+</head>
+
+<body>
+    {{ partial "navbar" . }}
+    <main class="site-main">
+        <section class="text-center">
+        <div class="container text-start">
+            <div class="row">
+                <div class="col-7" style="margin: 30px;">
+                    <h1>Recent Posts</h1>
+                    <hr>
+                    {{ range .Paginator.Pages }}
+                    <div>
+                        <section>
+                            <div class="row" style="margin-bottom: 30px;">
+                                <div class="col-1">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5>{{ .Params.day }}</h5>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col"><span>{{ .Params.month }}</span></div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <a href="{{ .Permalink }}"><h3>{{ .Title }}</h3></a>
+                                    {{/*  Tags  */}}
+                                    {{/*  <h5 style="font-weight: Normal">
+                                        tags: <span class="badge rounded-pill">
+                                            {{ range (.GetTerms "tags") }}
+                                            <a href="#">{{ .LinkTitle }}</a>
+                                            {{ end }}
+                                        </span>
+                                    </h5>  */}}
+                                    <p style="border-color: rgb(0,0,0);color: rgb(68,68,68);margin-top: 10px;">{{ .Content }}</p><button class="btn btn-light text-uppercase" type="button" style="border-radius: 0;border: 1px solid var(--bs-btn-disabled-color);"><a href="{{ .Permalink }}" style="color: #333">Read More</a></button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    {{ end }}   
+                    {{ template "_internal/pagination.html" . }}
+                </div>
+                <div class="col" style="margin-top: 50px;">
+                    <div></div>
+                    <h6 class="text-uppercase">COME SAY HELLO IN THE FORUMS!</h6>
+                    <h6 class="text-uppercase" style="margin-top: 50px;">CHECK OUT OUR YOUTUBE CHANNEL</h6>
+                    <div><i class="fa fa-google text-start" style="font-size: 111px;color: rgb(120,120,120);margin-top: 20px;"></i>
+                        <h4 class="text-capitalize text-start" style="margin-top: 20px;">Reviews us on google</h4>
+                    </div><span style="margin: 0;"><br><span style="color: rgb(17, 17, 17); background-color: rgb(249, 249, 249);">OUR AFFILIATES!</span><br><br></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    {{ partial "footer" . }}
+    {{ partial "scripts-footer" . }}
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/Roboto.css">
+<link rel="stylesheet" href="/fonts/font-awesome.min.css">
+<link rel="stylesheet" href="/fonts/material-icons.min.css">
+<link rel="stylesheet" href="/css/Blog-Detail-App.css">
+<link rel="stylesheet" href="/css/Features-Image-images.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<link rel="stylesheet" href="/css/Icon-Centered-Between-Lines.css">
+<link rel="stylesheet" href="/css/Stats-icons.css">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/untitled.css">
+<link rel="stylesheet" href="/css/White-Footer.css">
+
+<title>
+    {{- if .IsHome -}}
+        {{- .Site.Title -}}{{ with .Site.Params.slogan }} - {{ . }} {{ end }}
+    {{- else -}}
+        {{- .Title }} - {{ .Site.Title -}}
+    {{- end -}}
+</title>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{ partial "head" . }}
+</head>
+
+<body>
+    {{ partial "navbar" . }}
+    <section class="py-4 py-xl-5" style="width: 100%;color: rgb(58,156,255);background: #666262;">
+        <div class="container">
+            <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="background: rgb(102,98,98);">
+                <div class="row g-0 text-start justify-content-center align-items-center" style="background: #666262;">
+                    <div class="col-md-6">
+                        <div class="text-white p-4 p-md-5" style="background: #666262;"><img class="w-100 h-100 fit-cover" src="{{ .Params.src }}"></div>
+                    </div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;">
+                        <h2 class="fw-bold text-white mb-3">{{ .Title }}<br></h2>
+                        <p class="mb-4" style="color: #fff">{{ .Params.sub }}<br></p>
+                        <p class="mb-4" style="color:#fff;">{{ .Params.desc }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container" style="margin: 20px 20%;">
+        <div class="row" style="width: 100%;">
+            <div class="col-md-12" style="width: 100%;">
+                <div>
+                    <p style="color: rgb(0,0,0);">{{ .Content }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ partial "footer" . }}
+    {{ partial "scripts-footer" . }}
+</body>
+
+</html>

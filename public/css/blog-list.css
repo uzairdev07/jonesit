@@ -1,0 +1,6 @@
+.site-main section .container-fluid {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

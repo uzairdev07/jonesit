@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      {{- partial "head" . -}}
+      <link rel="stylesheet" type="text/css" href="/css/home.css">
+    </head>
+    <body>
+        {{- partial "navbar" . -}}
+        <div class="page-wrapper">
+            {{- block "main" . -}}{{ end }}
+        </div>
+        {{- partial "home-content" . -}}
+        {{- partial "footer" . -}}
+        {{- partial "scripts-footer" . -}}
+    </body>
+</html>

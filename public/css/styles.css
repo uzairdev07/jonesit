@@ -1,0 +1,28 @@
+.heading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#header-btns {
+  display: inline-block;
+  justify-content: space-between;
+  width: inherit;
+  padding: 10px;
+}
+
+.header-btns {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+#btn-rounded {
+  background-color: #f2f2f2;
+  color: #666666;
+  padding: 10px 20px;
+}
